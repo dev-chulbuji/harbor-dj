@@ -1,0 +1,5 @@
+.idea
+.vagrant
+*.swp
+vendor
+src
