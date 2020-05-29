@@ -41,6 +41,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION)do |config|
       n1.vm.hostname = N1_HOST_NAME
       n1.vm.network "private_network", ip: N1_IP
 
+      n1.vm.provision "file", source: "./src/packages", destination: "/tmp/harbor"
       n1.vm.provision "file", source: "./vendor", destination: "/tmp/vendor"
       n1.vm.provision "shell", path: "./src/bootstrap.sh"
 
