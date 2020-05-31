@@ -56,7 +56,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION)do |config|
       n2.vm.network "private_network", ip: N2_IP
 
       n2.vm.provision "file", source: "./certs", destination: "/tmp/certs"
-      n2.vm.provision "shell", path: "cp /tmp/ca.crt /etc/pki/ca-trust/source/anchors/"
-      n2.vm.provision "shell", path: "update-ca-trust"
+#      n2.vm.provision "shell", path: "cp /tmp/ca.crt /etc/pki/ca-trust/source/anchors/"
+#      n2.vm.provision "shell", path: "update-ca-trust"
   end
 end
